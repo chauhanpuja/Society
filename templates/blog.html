@@ -1,0 +1,169 @@
+{% extends 'base.html'%}
+{% load static %}
+
+
+{% block body %}
+
+
+<!-- <div class="alert alert-{{msg.tags}} alert-dismissible fade show" role="alert">
+  <strong>Error : </strong> This is not available
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div> -->
+
+        
+<!-- <body data-rsssl=1 class="page-template-default page page-id-29 theme-greennature _masterslider _msp_version_3.4.5 woocommerce-no-js"> -->
+	<div class="body-wrapper  float-menu" data-home="https://demo.goodlayers.com/greennature/">
+		
+		<div class="greennature-page-title-wrapper header-style-5-title-wrapper">
+			<div class="greennature-page-title-overlay"></div>
+			<div class="greennature-page-title-container container">
+				<h1 class="greennature-page-title">BLOG POSTS</h1>
+				<!-- <span class="greennature-page-caption">Caption placed here</span> -->
+			</div>
+		</div>
+		<!-- is search -->
+		<div class="content-wrapper">
+			<div class="greennature-content">
+				<!-- Above Sidebar Section-->
+				<!-- Sidebar With Content Section-->
+				<div class="with-sidebar-wrapper">
+					<div class="with-sidebar-container container">
+						<div class="with-sidebar-left eight columns">
+							<div class="with-sidebar-content twelve columns">
+								<section id="content-section-1">
+									<div class="section-container container">
+										<div class="blog-item-wrapper">
+											<div class="blog-item-holder">
+												<div class="greennature-item greennature-blog-full">
+													<div class="greennature-ux greennature-blog-full-ux">
+														<article id="post-862"
+															class="post-862 post type-post status-publish format-standard has-post-thumbnail hentry category-blog category-fit-row tag-blog tag-link tag-news">
+															
+															{%for i in post %}
+															<div class="greennature-standard-style">
+																
+																<div class="greennature-blog-thumbnail">
+																	<a
+																		href="/post/{{i.slug}}">
+																		<img src="/media/{{i.image}}"
+																			alt="" width="650px" height="310px" /></a>
+																</div>
+																<div class="greennature-blog-date-wrapper">
+																	<!-- <div class="greennature-blog-day">{{i.date}}</div> -->
+																	
+																	<!-- <div class="greennature-blog-month">Dec</div> -->
+																</div>
+																<h4>{{i.date}}</h4>
+																<div class="blog-content-wrapper">
+																	<header class="post-header">
+																		<h3 class="greennature-blog-title"><a
+																				href="/post/{{i.slug}}">{{i.title}}</a></h3>
+																		<div class="greennature-blog-info">
+																			<!-- <div
+																				class="blog-info blog-comment greennature-skin-info">
+																				<i class="fa fa-comment-o"></i><a
+																					href="https://demo.goodlayers.com/greennature/2013/12/09/magna-pars-studiorum/#respond">2
+																					<span
+																						class="greennature-tail">Comments</span></a>
+																			</div> -->
+																			<!-- <div
+																				class="blog-info blog-author greennature-skin-info">
+																				<i class="fa fa-pencil"></i><a
+																					href="https://demo.goodlayers.com/greennature/author/superuser/"
+																					title="Posts by John Maxwell"
+																					rel="author">John Maxwell</a></div> -->
+																			<div
+																				class="blog-info blog-category greennature-skin-info">
+																				<i class="fa fa-folder-open-o"></i><a
+																					href="/post/{{i.slug}}"
+																					rel="tag">Blog</a><span
+																					class="sep">,</span> <a
+																					href="/post/{{i.slug}}"
+																					rel="tag">{{i.name}}</a></div>
+																			<div class="clear"></div>
+																		</div>
+																		<div class="clear"></div>
+																	</header><!-- entry-header -->
+																	<div class="greennature-blog-content">{{i.desc}} <div class="clear"></div>
+																	<a href="/post/{{i.slug}}" >Read More</a>
+																			
+																	</div>
+
+
+																</div> <!-- blog content wrapper -->
+																<div class="clear"></div>
+															</div>
+															{%endfor%}
+														</article><!-- #post -->
+													</div>
+												</div>
+									
+											
+								</section>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="greennature-sidebar greennature-right-sidebar four columns">
+							<div class="greennature-item-start-content sidebar-right-item">
+								<div id="search-3" class="widget widget_search greennature-item greennature-widget">
+									<div class="gdl-search-form">
+										<form method="get" id="searchform"
+											action="/search">
+											<div class="search-text" id="search-text">
+												<input type="text" name="query" id="query" autocomplete="off"
+													data-default="Type keywords..." />
+											</div>
+											<input type="submit" id="searchsubmit" value="" />
+											<div class="clear"></div>
+										</form>
+									</div>
+								</div>
+								
+								<div id="gdlr-recent-portfolio-widget-2"
+									class="widget widget_gdlr-recent-portfolio-widget greennature-item greennature-widget">
+									<h3 class="greennature-widget-title">Recent Post</h3>
+									<div class="clear"></div>
+									<div class="greennature-recent-port-widget">
+										
+									{%for i in post%}
+										<div class="recent-post-widget">
+											<div class="recent-post-widget-thumbnail"><a
+													href="/post/{{i.slug}}"><img
+														src="/media/{{i.image}}"
+														alt="" width="150" height="150" /></a></div>
+											<div class="recent-post-widget-content">
+												<div class="recent-post-widget-title"><a
+														href="/post/{{i.slug}}">{{i.name}}</a></div>
+												<div class="recent-post-widget-info">
+													<div class="blog-info blog-date greennature-skin-info"><i
+															class="fa fa-clock-o"></i><a
+															href="/post/{{i.slug}}">{{i.date}}</a></div>
+													<div class="clear"></div>
+												</div>
+											</div>
+											<div class="clear"></div>
+										</div>
+
+										{%endfor%}
+										<div class="clear"></div>
+									</div>
+								</div>
+								
+							
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<!-- Below Sidebar Section-->
+			</div><!-- greennature-content -->
+			<div class="clear"></div>
+		</div><!-- content wrapper -->
+		
+		
+	</div> 
+	<!-- body-wrapper -->
+	
+<!-- </body> -->
+{% endblock %}
+<!-- WP Fastest Cache file was created in 0.28356218338013 seconds, on 25-12-21 16:35:53 -->

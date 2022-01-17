@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+
+
+<!-- is search -->
+<div class="content-wrapper">
+	<div class="greennature-content">
+		<!-- Above Sidebar Section-->
+		<!-- Sidebar With Content Section-->
+		<div class="with-sidebar-wrapper">
+			<section id="content-section-1">
+				<div class="greennature-parallax-wrapper greennature-background-image gdlr-show-all greennature-skin-dark-skin"
+					id="greennature-parallax-wrapper-1" data-bgspeed="0"
+					style="background-image: url('//a6e8z9v6.stackpathcdn.com/greennature/wp-content/uploads/2015/10/about-title-bg.jpg'); padding-top: 230px; padding-bottom: 100px; ">
+					<div class="container">
+						<div class="greennature-title-item">
+							<div
+								class="greennature-item-title-wrapper greennature-item  greennature-center greennature-extra-large ">
+								<div class="greennature-item-title-container container">
+									<div class="greennature-item-title-head">
+										<h3
+											class="greennature-item-title greennature-skin-title greennature-skin-border">
+											SHOP</h3>
+										<div class="greennature-item-title-caption greennature-skin-info">Shop With
+											Green Nature</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="clear"></div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</section>
+			<section id="content-section-2">
+				<div class="section-container container">
+					<div class="greennature-item greennature-content-item text-center" style="margin: -15px -303px 15px 20px;">
+						<p style="text-align: left;"><span class="clear"></span><span class="greennature-space"
+								style="margin-top: -30px; display: block;"></span></p>
+						<p style="text-align: left;">
+
+							
+						<div class="woocommerce columns-4 ">
+							
+							<ul class="products columns-4" >
+								
+
+								{%for i in shop%}
+								<li
+									class="product type-product post-2401 status-publish instock product_cat-mens product_cat-shoes product_tag-fashion-2 product_tag-men product_tag-shoes-2 has-post-thumbnail sale shipping-taxable purchasable product-type-variable has-default-attributes ">
+									
+										<a href="/productview/{{i.slug}}"><img 
+											src="/media/{{i.image}}" style="height: 350px;"
+											class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
+											loading="lazy" /></a>
+										<h2 class="woocommerce-loop-product__title">{{i.name}}</h2>
+										
+										<span class="price"><del aria-hidden="true"><span
+													class="woocommerce-Price-amount amount"><bdi><span
+															class="woocommerce-Price-currencySymbol">&#36;</span>290.00</bdi></span></del>
+											<ins><span class="woocommerce-Price-amount amount"><bdi><span
+															class="woocommerce-Price-currencySymbol">&#36;</span>{{i.price}}</bdi></span></ins></span>
+									
+												<p>{{i.desc|slice:"1:80"}}...</p><a href="/productview/{{i.slug}}">Read More</a>
+
+								</li>
+
+									{%endfor%}
+								</ul>
+
+								
+                                
+						</div>
+						
+						</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</section>
+			
+		</div>
+		<!-- Below Sidebar Section-->
+	</div><!-- greennature-content -->
+	<div class="clear"></div>
+</div><!-- content wrapper -->
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

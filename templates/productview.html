@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+
+
+<!-- is search -->
+<div class="content-wrapper">
+	<div class="greennature-content">
+		<!-- Above Sidebar Section-->
+		<!-- Sidebar With Content Section-->
+		<div class="with-sidebar-wrapper">
+			<section id="content-section-1">
+				<div class="greennature-parallax-wrapper greennature-background-image gdlr-show-all greennature-skin-dark-skin"
+					id="greennature-parallax-wrapper-1" data-bgspeed="0"
+					style="background-image: url('//a6e8z9v6.stackpathcdn.com/greennature/wp-content/uploads/2015/10/about-title-bg.jpg'); padding-top: 230px; padding-bottom: 100px; ">
+					<div class="container">
+						<div class="greennature-title-item">
+							<div
+								class="greennature-item-title-wrapper greennature-item  greennature-center greennature-extra-large ">
+								<div class="greennature-item-title-container container">
+									<div class="greennature-item-title-head">
+										<h3
+											class="greennature-item-title greennature-skin-title greennature-skin-border">
+											SHOP</h3>
+										<div class="greennature-item-title-caption greennature-skin-info">Shop With
+											Green Nature</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="clear"></div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</section>
+			<!-- <section id="content-section-2">
+				<div class="section-container container">
+					<div class="greennature-item greennature-content-item">
+						<p style="text-align: left;"><span class="clear"></span><span class="greennature-space"
+								style="margin-top: -30px; display: block;"></span></p>
+						<p style="text-align: left;">
+
+							
+						<div class="woocommerce columns-4 ">
+							
+							
+								
+
+								{%for i in shop%}
+								
+                                <div class="row">
+                                    <div class="col md-6">
+								
+										<a href="/productview/{{i.slug}}"><img width="300" height="400"
+											src="/media/{{i.image}}" style="height: 400px; text-align:center;"
+											class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
+											loading="lazy" /></a>
+										<h2 class="woocommerce-loop-product__title">{{i.name}}</h2>
+										
+										<span class="price"><del aria-hidden="true"><span
+                                            class="woocommerce-Price-amount amount"><bdi><span
+                                                    class="woocommerce-Price-currencySymbol">&#36;</span>290.00</bdi></span></del>
+                                    <ins><span class="woocommerce-Price-amount amount"><bdi><span
+                                                    class="woocommerce-Price-currencySymbol">&#36;</span>{{i.price}}</bdi></span></ins></span>
+                            
+
+                                                            
+								
+
+									
+								
+                               
+                            </div>
+
+                            <div class="col md-6">
+                                <p>{{i.desc}}</p>
+                            </div>
+								
+                                
+						</div>
+                        {%endfor%}
+						
+						</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</section> -->
+			
+            <section id="content-section-2"  style="text-align: center;" >
+                {% for i in shop%}
+				<div class="greennature-color-wrapper  gdlr-show-all no-skin greennature-half-bg-wrapper"
+					style="background-color: #ffffff; ">
+					<div class="greennature-half-bg greennature-bg-solid my-4">
+                        <img src="/media/{{i.image}}" style="height: 300px;" alt="">
+						
+					</div>
+					<div class="container">
+						<div class="six columns"></div>
+						<div class="six columns">
+							<div class="greennature-item greennature-about-us-item greennature-normal">
+								<div class="about-us-title-wrapper">
+									<h3 class="about-us-title">{{i.name}}</h3>
+                                    <span class="price"><del aria-hidden="true"><span
+                                        class="woocommerce-Price-amount amount"><bdi><span
+                                                class="woocommerce-Price-currencySymbol">&#36;</span>290.00</bdi></span></del>
+                                <<ins><span class="woocommerce-Price-amount amount"><bdi><span
+                                    class="woocommerce-Price-currencySymbol">&#36;</span>{{i.price}}</bdi></span></ins>
+									<!-- <div class="about-us-caption greennature-title-font greennature-skin-info">Amet
+										Dapibus Mollis</div> -->
+									<div class="about-us-title-divider"></div>
+								</div>
+								<div class="about-us-content-wrapper">
+									<div class="about-us-content greennature-skin-content">
+										<p>{{i.desc}}</p>
+									</div>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+
+                {%endfor%}
+				<div class="clear"></div>
+			</section>
+		</div>
+		
+	</div>
+	<div class="clear"></div>
+</div><!-- content wrapper -->
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
